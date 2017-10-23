@@ -1,3 +1,5 @@
+physical-memory2.dmp
+physical-memory1.dmp
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -99,3 +101,4 @@ ENV/
 
 # mypy
 .mypy_cache/
+
