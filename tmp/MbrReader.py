@@ -1,10 +1,6 @@
 import struct
 import binascii
-from Partition_Table import PartitionTable
 from affichage import Affichage
-
-
-
 PartitionTypes = {
    '00': "Empty",
    '01': "FAT12,CHS",
@@ -153,15 +149,5 @@ class MBRParser:
                 return True,data,i*2-512
             i+=1
         return False,None,None
-
-        		
-if __name__ == "__main__":
-
-    file = open('physical-memory2.dmp', 'rb')
-    mbr = MBRParser(file)
-    if(mbr.istMbr()):
-       #print(mbr.dumpHex(mbr.data))
-        mbr.affichage()
-        parttable= PartitionTable(mbr)
 
 
